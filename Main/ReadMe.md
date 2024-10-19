@@ -1,0 +1,1 @@
+This project is to get more familiar with the C language
