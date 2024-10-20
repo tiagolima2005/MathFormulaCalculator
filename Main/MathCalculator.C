@@ -9,7 +9,7 @@ int main()
     int option;
     do
     {
-    printf("Enter the number of the formula you want:\n");
+    printf("\nEnter the number of the formula you want:\n");
     printf("1 - Circle Formulas\n");
     printf("2 - Triangle Formulas\n");
     printf("3 - Square Formulas\n");
@@ -73,7 +73,13 @@ void circleFormulas()
     printf("Choose one of the following circle formulas:\n");
     printf("1 - Circumference (C)\n");
     printf("2 - Area (A)\n");
-    scanf("%d" , &circleAnswer);
+
+    if (scanf("%d" , &circleAnswer) != 1)
+    {
+        while (getchar() != '\n');
+        printf("Insert a valid number\n");
+        continue;
+    }
 
     if (circleAnswer == 1)
     {
@@ -93,7 +99,7 @@ void circleFormulas()
     }
     else 
     {
-        printf("Invalid number, please choose between 1 and 2...\n");
+        printf("Invalid number, please choose 1 or 2...\n");
     }
     }
 }
@@ -105,24 +111,58 @@ void triangleFormulas()
     double side_b;
     double side_c;
     double height;
+
+    while (1) 
+    {
     printf("Choose one of the following triangle formulas:\n");
     printf("1 - Hypotenuse (using the Pythagorean Theorem)\n");
     printf("2 - Area of a Triangle\n");
     printf("3 - Perimeter of a Triangle\n");
-    scanf("%d" , &triangleAnswer);
 
-    while (1)
+    if (scanf("%d" , &triangleAnswer) != 1)
     {
+        while (getchar() != '\n');
+        printf("Please insert a valid number\n");
+        continue;
+    }
+
         if (triangleAnswer == 1)
         {
-        printf("Insert the length of side a\n");
-        scanf("%lf" , &side_a);
-        printf("Insert the length of side b\n");
-        scanf("%lf" , &side_b);
+            while (1)
+            {
+            printf("Insert the length of side a\n");
+            if (scanf("%lf" , &side_a) != 1)
+            {
+            while (getchar() != '\n');
+            printf("Please insert a valid number\n");
+            continue;
+            }
+            else
+            {
+                break;
+            }
+            }
+
+            while (1)
+            {
+            printf("Insert the length of side b\n");
+            if (scanf("%lf" , &side_b) != 1)
+            {
+            while (getchar() != '\n');
+            printf("Please insert a valid number\n");
+            continue;
+            }
+            else
+            {
+                break;
+            }
+            }
+
         double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
         printf("The hypotenuse of your triangle is: %.2lf" , hypotenuse);
         break;
         }
+        
         else if (triangleAnswer == 2)
         {
             printf("Insert the length of side b\n");
@@ -147,7 +187,7 @@ void triangleFormulas()
         }
         else
         {
-            printf("Please insert a valid number\n");
+            printf("Invalid number, please choose 1, 2 or 3...\n");
         }
     }
     
