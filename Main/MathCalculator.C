@@ -162,25 +162,89 @@ void triangleFormulas()
         printf("The hypotenuse of your triangle is: %.2lf" , hypotenuse);
         break;
         }
-        
+
         else if (triangleAnswer == 2)
         {
+            while (1)
+            {
             printf("Insert the length of side b\n");
-            scanf("%lf" , &side_b);
+            if (scanf("%lf" , &side_b) != 1)
+            {
+                while (getchar() != '\n');
+                printf("Insert a valid number\n");
+                continue;
+            }
+            else
+            {
+                break;
+            }
+            }
+
+            while (1)
+            {
             printf("Insert the height\n");
-            scanf("%lf" , &height);
+            if (scanf("%lf" , &height) != 1)
+            {
+                while (getchar() != '\n');
+                printf("Insert a valid number\n");
+                continue;
+            }
+            else
+            {
+                break;
+            }
+            }
             double area = (side_b * height) / 2;
             printf("The area of your triangle is: %.2lf" , area);
             break;
+            
         }
         else if (triangleAnswer == 3)
         {
+            while (1)
+            {
             printf("Insert the length of side a\n");
-            scanf("%lf" , &side_a);
+            if (scanf("%lf" , &side_a) != 1)
+            {
+                while (getchar() != '\n');
+                printf("Insert a valid number\n");
+                continue;
+            }
+            else
+            {
+                break;
+            }
+            }
+
+            while (1)
+            {
             printf("Insert the length of side b\n");
-            scanf("%lf" , &side_b);
+            if (scanf("%lf" , &side_b) != 1)
+            {
+                while (getchar() != '\n');
+                printf("Insert a valid number\n");
+                continue;
+            }
+            else
+            {
+                break;
+            }
+            }
+
+            while (1)
+            {
             printf("Insert the length of side c\n");
-            scanf("%lf" , &side_c);
+            if (scanf("%lf" , &side_c) != 1)
+            {
+                while (getchar() != '\n');
+                printf("Insert a valid number\n");
+                continue;
+            }
+            else
+            {
+                break;
+            }
+            }
             double perimeter = (side_a + side_b + side_c);
             printf("The perimeter of our triangle is: %.2lf" , perimeter);
             break;
