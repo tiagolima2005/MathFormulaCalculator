@@ -83,16 +83,40 @@ void circleFormulas()
 
     if (circleAnswer == 1)
     {
+        while (1)
+        {
         printf("Insert the Radius of the circle:\n");
-        scanf("%lf" , &Radius);
+        if (scanf("%lf" , &Radius) != 1)
+        {
+            while (getchar() != '\n');
+            printf("Insert a valid number\n");
+            continue;
+        }
+        else
+        {
+            break;
+        }
+        }
         double circumference = (2 * M_PI * Radius);
         printf("The Circumference of your circle is: %.2lf" , circumference);
         break;
     }
     else if (circleAnswer == 2)
     {
+        while (1)
+        {
         printf("Insert the Radius of the circle:\n");
-        scanf("%lf" , &Radius);
+        if (scanf("%lf" , &Radius) != 1)
+        {
+            while (getchar() != '\n');
+            printf("Insert a valid number\n");
+            continue;
+        }
+        else
+        {
+            break;
+        }
+        }
         double area = (M_PI * (Radius * Radius));
         printf("The Area of your circle is: %.2lf" , area);
         break;
