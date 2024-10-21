@@ -4,7 +4,7 @@
 void circleFormulas();
 void triangleFormulas();
 int IntegerInputAutomation();
-double DoubleInputAutomatin();
+double DoubleInputAutomation();
 
 int IntegerInputAutomation()
 {
@@ -14,7 +14,7 @@ int IntegerInputAutomation()
         if (scanf("%d" , &input) != 1)
         {
             while (getchar() != '\n');
-            printf("Insert a number from the menu (1-7\n");
+            printf("Insert a valid number...\n");
         }
         else
         {
@@ -105,51 +105,21 @@ void circleFormulas()
     printf("1 - Circumference (C)\n");
     printf("2 - Area (A)\n");
 
-    if (scanf("%d" , &circleAnswer) != 1)
-    {
-        while (getchar() != '\n');
-        printf("Insert a valid number\n");
-        continue;
-    }
+    circleAnswer = IntegerInputAutomation();
 
     if (circleAnswer == 1)
     {
-        while (1)
-        {
         printf("Insert the Radius of the circle:\n");
-        if (scanf("%lf" , &Radius) != 1)
-        {
-            while (getchar() != '\n');
-            printf("Insert a valid number\n");
-            continue;
-        }
-        else
-        {
-            break;
-        }
-        }
+        Radius = DoubleInputAutomation();
         double circumference = (2 * M_PI * Radius);
-        printf("The Circumference of your circle is: %.2lf" , circumference);
-        break;
+        printf("\nThe Circumference of your circle is: %.2lf" , circumference);
     }
     else if (circleAnswer == 2)
     {
-        while (1)
-        {
         printf("Insert the Radius of the circle:\n");
-        if (scanf("%lf" , &Radius) != 1)
-        {
-            while (getchar() != '\n');
-            printf("Insert a valid number\n");
-            continue;
-        }
-        else
-        {
-            break;
-        }
-        }
+        Radius = DoubleInputAutomation();
         double area = (M_PI * (Radius * Radius));
-        printf("The Area of your circle is: %.2lf" , area);
+        printf("\nThe Area of your circle is: %.2lf" , area);
         break;
     }
     else 
