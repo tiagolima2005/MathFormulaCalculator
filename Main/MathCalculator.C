@@ -3,6 +3,42 @@
 
 void circleFormulas();
 void triangleFormulas();
+int IntegerInputAutomation();
+double DoubleInputAutomatin();
+
+int IntegerInputAutomation()
+{
+    int input;
+    while (1)
+    {
+        if (scanf("%d" , &input) != 1)
+        {
+            while (getchar() != '\n');
+            printf("Insert a number from the menu (1-7\n");
+        }
+        else
+        {
+            return input;
+        }
+    }
+}
+
+double DoubleInputAutomation()
+{
+    double input;
+    while (1)
+        {
+        if (scanf("%lf" , &input) != 1)
+        {
+            while (getchar() != '\n');
+            printf("Insert a valid number\n");
+        }
+        else
+        {
+            return input;
+        }
+        }
+}
 
 int main()
 {
@@ -18,12 +54,7 @@ int main()
     printf("6 - Cylinder Formulas\n");
     printf("7 - Close the program\n");
 
-    if (scanf("%d" , &option) != 1) //if scanf doesnt return 1, it means that it didnt receive a integer number
-    {
-        while (getchar() != '\n'); //cleans buffer if its not a number
-        printf("Insert a valid number\n"); //print this message
-        continue; //continue until its a valid number
-    }
+    option = IntegerInputAutomation();
 
     switch (option)
     {
