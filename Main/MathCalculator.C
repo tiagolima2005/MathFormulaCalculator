@@ -104,6 +104,7 @@ void circleFormulas()
     printf("Choose one of the following circle formulas:\n");
     printf("1 - Circumference (C)\n");
     printf("2 - Area (A)\n");
+    printf("3 - Return to main menu\n");
 
     circleAnswer = IntegerInputAutomation();
 
@@ -123,9 +124,14 @@ void circleFormulas()
         printf("\nThe Area of your circle is: %.2lf\n" , area);
         break;
     }
+    else if (circleAnswer == 3)
+    {
+        printf("Returning to main menu...\n");
+        break;
+    }
     else 
     {
-        printf("Invalid number, please choose 1 or 2...\n");
+        printf("Invalid number, please choose 1, 2 or 3...\n");
     }
     }
 }
@@ -144,6 +150,7 @@ void triangleFormulas()
     printf("1 - Hypotenuse (using the Pythagorean Theorem)\n");
     printf("2 - Area of a Triangle\n");
     printf("3 - Perimeter of a Triangle\n");
+    printf("4 - Return to main menu...\n");
 
     triangleAnswer = IntegerInputAutomation();
 
@@ -181,9 +188,14 @@ void triangleFormulas()
             printf("\nThe perimeter of our triangle is: %.2lf\n" , perimeter);
             break;
         }
+        else if (triangleAnswer == 4)
+        {
+            printf("Returning to main menu\n");
+            break;
+        }
         else
         {
-            printf("Invalid number, please choose 1, 2 or 3...\n");
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
         }
     }
 }
