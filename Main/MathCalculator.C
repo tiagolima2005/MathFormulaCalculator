@@ -113,6 +113,7 @@ void circleFormulas()
         Radius = DoubleInputAutomation();
         double circumference = (2 * M_PI * Radius);
         printf("\nThe Circumference of your circle is: %.2lf\n" , circumference);
+        break;
     }
     else if (circleAnswer == 2)
     {
@@ -152,8 +153,9 @@ void triangleFormulas()
             side_a = DoubleInputAutomation();
             printf("Insert the length of side b\n");
             side_b = DoubleInputAutomation();
-        double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
-        printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse);
+            double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
+            printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse);
+        break;
         }
 
         else if (triangleAnswer == 2)
@@ -164,7 +166,7 @@ void triangleFormulas()
             height = DoubleInputAutomation();
             double area = (side_b * height) / 2;
             printf("\nThe area of your triangle is: %.2lf\n" , area);
-            
+            break;
         }
 
         else if (triangleAnswer == 3)
@@ -177,6 +179,7 @@ void triangleFormulas()
             side_c = DoubleInputAutomation();
             double perimeter = (side_a + side_b + side_c);
             printf("\nThe perimeter of our triangle is: %.2lf\n" , perimeter);
+            break;
         }
         else
         {
