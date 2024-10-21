@@ -112,14 +112,14 @@ void circleFormulas()
         printf("Insert the Radius of the circle:\n");
         Radius = DoubleInputAutomation();
         double circumference = (2 * M_PI * Radius);
-        printf("\nThe Circumference of your circle is: %.2lf" , circumference);
+        printf("\nThe Circumference of your circle is: %.2lf\n" , circumference);
     }
     else if (circleAnswer == 2)
     {
         printf("Insert the Radius of the circle:\n");
         Radius = DoubleInputAutomation();
         double area = (M_PI * (Radius * Radius));
-        printf("\nThe Area of your circle is: %.2lf" , area);
+        printf("\nThe Area of your circle is: %.2lf\n" , area);
         break;
     }
     else 
@@ -144,140 +144,43 @@ void triangleFormulas()
     printf("2 - Area of a Triangle\n");
     printf("3 - Perimeter of a Triangle\n");
 
-    if (scanf("%d" , &triangleAnswer) != 1)
-    {
-        while (getchar() != '\n');
-        printf("Please insert a valid number\n");
-        continue;
-    }
+    triangleAnswer = IntegerInputAutomation();
 
         if (triangleAnswer == 1)
         {
-            while (1)
-            {
             printf("Insert the length of side a\n");
-            if (scanf("%lf" , &side_a) != 1)
-            {
-            while (getchar() != '\n');
-            printf("Please insert a valid number\n");
-            continue;
-            }
-            else
-            {
-                break;
-            }
-            }
-
-            while (1)
-            {
+            side_a = DoubleInputAutomation();
             printf("Insert the length of side b\n");
-            if (scanf("%lf" , &side_b) != 1)
-            {
-            while (getchar() != '\n');
-            printf("Please insert a valid number\n");
-            continue;
-            }
-            else
-            {
-                break;
-            }
-            }
-
+            side_b = DoubleInputAutomation();
         double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
-        printf("The hypotenuse of your triangle is: %.2lf" , hypotenuse);
-        break;
+        printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse);
         }
 
         else if (triangleAnswer == 2)
         {
-            while (1)
-            {
             printf("Insert the length of side b\n");
-            if (scanf("%lf" , &side_b) != 1)
-            {
-                while (getchar() != '\n');
-                printf("Insert a valid number\n");
-                continue;
-            }
-            else
-            {
-                break;
-            }
-            }
-
-            while (1)
-            {
+            side_b = DoubleInputAutomation();
             printf("Insert the height\n");
-            if (scanf("%lf" , &height) != 1)
-            {
-                while (getchar() != '\n');
-                printf("Insert a valid number\n");
-                continue;
-            }
-            else
-            {
-                break;
-            }
-            }
+            height = DoubleInputAutomation();
             double area = (side_b * height) / 2;
-            printf("The area of your triangle is: %.2lf" , area);
-            break;
+            printf("\nThe area of your triangle is: %.2lf\n" , area);
             
         }
+
         else if (triangleAnswer == 3)
         {
-            while (1)
-            {
             printf("Insert the length of side a\n");
-            if (scanf("%lf" , &side_a) != 1)
-            {
-                while (getchar() != '\n');
-                printf("Insert a valid number\n");
-                continue;
-            }
-            else
-            {
-                break;
-            }
-            }
-
-            while (1)
-            {
+            side_a = DoubleInputAutomation();
             printf("Insert the length of side b\n");
-            if (scanf("%lf" , &side_b) != 1)
-            {
-                while (getchar() != '\n');
-                printf("Insert a valid number\n");
-                continue;
-            }
-            else
-            {
-                break;
-            }
-            }
-
-            while (1)
-            {
+            side_b = DoubleInputAutomation();
             printf("Insert the length of side c\n");
-            if (scanf("%lf" , &side_c) != 1)
-            {
-                while (getchar() != '\n');
-                printf("Insert a valid number\n");
-                continue;
-            }
-            else
-            {
-                break;
-            }
-            }
+            side_c = DoubleInputAutomation();
             double perimeter = (side_a + side_b + side_c);
-            printf("The perimeter of our triangle is: %.2lf" , perimeter);
-            break;
+            printf("\nThe perimeter of our triangle is: %.2lf\n" , perimeter);
         }
         else
         {
             printf("Invalid number, please choose 1, 2 or 3...\n");
         }
     }
-    
 }
