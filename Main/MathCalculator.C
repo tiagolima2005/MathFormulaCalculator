@@ -5,6 +5,33 @@ void circleFormulas();
 void triangleFormulas();
 int IntegerInputAutomation();
 double DoubleInputAutomation();
+int mainMenuRepeat();
+
+int mainMenuRepeat()
+{
+    int input;
+    while (1)
+    {
+        printf("\nEnter the number of the formula you want:\n");
+        printf("1 - Circle Formulas\n");
+        printf("2 - Triangle Formulas\n");
+        printf("3 - Square Formulas\n");
+        printf("4 - Rectangle Formulas\n");
+        printf("5 - Sphere Formulas\n");
+        printf("6 - Cylinder Formulas\n");
+        printf("7 - Close the program\n");
+        if (scanf("%d" , &input) != 1)
+        {
+            while (getchar() != '\n');
+            printf("\nInsert a valid number\n");
+        }
+        else
+        {
+            return input;
+        }
+    }
+}
+
 
 int IntegerInputAutomation()
 {
@@ -14,7 +41,7 @@ int IntegerInputAutomation()
         if (scanf("%d" , &input) != 1)
         {
             while (getchar() != '\n');
-            printf("Insert a valid number...\n");
+            printf("\nInsert a valid number...\n");
         }
         else
         {
@@ -31,7 +58,7 @@ double DoubleInputAutomation()
         if (scanf("%lf" , &input) != 1)
         {
             while (getchar() != '\n');
-            printf("Insert a valid number\n");
+            printf("\nInsert a valid number\n");
         }
         else
         {
@@ -45,16 +72,7 @@ int main()
     int option;
     do
     {
-    printf("\nEnter the number of the formula you want:\n");
-    printf("1 - Circle Formulas\n");
-    printf("2 - Triangle Formulas\n");
-    printf("3 - Square Formulas\n");
-    printf("4 - Rectangle Formulas\n");
-    printf("5 - Sphere Formulas\n");
-    printf("6 - Cylinder Formulas\n");
-    printf("7 - Close the program\n");
-
-    option = IntegerInputAutomation();
+    option = mainMenuRepeat();
 
     switch (option)
     {
