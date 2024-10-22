@@ -3,6 +3,7 @@
 
 void circleFormulas();
 void triangleFormulas();
+void squareFormulas();
 int IntegerInputAutomation();
 double DoubleInputAutomation();
 int mainMenuRepeat();
@@ -180,7 +181,7 @@ void triangleFormulas()
             side_b = DoubleInputAutomation();
             double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
             printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse);
-        break;
+            break;
         }
 
         else if (triangleAnswer == 2)
@@ -209,6 +210,56 @@ void triangleFormulas()
         else if (triangleAnswer == 4)
         {
             printf("Returning to main menu\n");
+            break;
+        }
+        else
+        {
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
+        }
+    }
+}
+
+void squareFormulas()
+{
+    while (1)
+    {
+        int squareAnswer;
+        double side_length;
+        printf("Choose one of the following square formulas:\n");
+        printf("1 - Area of a square\n");
+        printf("2 - Perimeter of a square\n");
+        printf("3 - Diagonal of a square\n");
+        printf("4 - Return to main menu\n");
+
+        squareAnswer = IntegerInputAutomation();
+
+        if (squareAnswer == 1)
+        {
+            printf("Insert the side length:\n");
+            side_length = DoubleInputAutomation();
+            double area = (side_length * side_length);
+            printf("The area of your square is: %lf\n" , area);
+            break;
+        }
+        else if (squareAnswer == 2)
+        {
+            printf("Insert the side length:\n");
+            side_length = DoubleInputAutomation();
+            double perimeter = (4 * side_length);
+            printf("The perimeter of your square is: %lf\n" , perimeter);
+            break;
+        }
+        else if (squareAnswer == 3)
+        {
+            printf("Insert the side length:\n");
+            side_length = DoubleInputAutomation();
+            double diagonal = (side_length * sqrt(2));
+            printf("The diagonal of your square is: %lf\n" , diagonal);
+            break;
+        }
+        else if (squareAnswer == 4)
+        {
+            printf("Returning to main menu...\n");
             break;
         }
         else
