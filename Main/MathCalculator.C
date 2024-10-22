@@ -91,7 +91,7 @@ int main()
         break;
 
     case 4:
-        /* code */
+        rectangleFormulas();
         break;
 
     case 5:
@@ -281,6 +281,7 @@ void rectangleFormulas()
         printf("1 - Area of a rectangle\n");
         printf("2 - Perimeter of a rectangle\n");
         printf("3 - Diagonal of a rectangle\n");
+        printf("4 - Return to main menu\n");
         rectangleAnswer = IntegerInputAutomation();
 
         if (rectangleAnswer == 1)
@@ -293,6 +294,34 @@ void rectangleFormulas()
             printf("The area of your rectangle is: %lf" , area);
             break;
         }
+        else if (rectangleAnswer == 2)
+        {
+            printf("Insert the length:\n");
+            length = DoubleInputAutomation();
+            printf("Insert the width:\n");
+            width = DoubleInputAutomation();
+            double perimeter = (2 * (length + width));
+            printf("The perimeter of your rectangle is: %lf" , perimeter);
+            break;
+        }
+        else if (rectangleAnswer == 3)
+        {
+            printf("Insert the length:\n");
+            length = DoubleInputAutomation();
+            printf("Insert the width:\n");
+            width = DoubleInputAutomation();
+            double diagonal = sqrt((length * length) + (width * width));
+            printf("The diagonal of your rectangle is: %lf" , diagonal);
+            break;
+        }
+        else if (rectangleAnswer == 4)
+        {
+            printf("Returning to main menu...\n");
+            break;
+        }
+        else
+        {
+            printf("Please insert a valid number\n");
+        }
     }
-
 }
