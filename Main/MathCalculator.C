@@ -86,7 +86,7 @@ int main()
         break;
 
     case 3:
-        /* code */
+        squareFormulas();
         break;
 
     case 4:
