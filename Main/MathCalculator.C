@@ -4,6 +4,7 @@
 void circleFormulas();
 void triangleFormulas();
 void squareFormulas();
+void rectangleFormulas();
 int IntegerInputAutomation();
 double DoubleInputAutomation();
 int mainMenuRepeat();
@@ -267,4 +268,31 @@ void squareFormulas()
             printf("Invalid number, please choose 1, 2, 3 or 4...\n");
         }
     }
+}
+
+void rectangleFormulas()
+{
+    while (1)
+    {
+        int rectangleAnswer;
+        double length;
+        double width;
+        printf("Choose one of the following rectangle formulas:\n");
+        printf("1 - Area of a rectangle\n");
+        printf("2 - Perimeter of a rectangle\n");
+        printf("3 - Diagonal of a rectangle\n");
+        rectangleAnswer = IntegerInputAutomation();
+
+        if (rectangleAnswer == 1)
+        {
+            printf("Insert the length:\n");
+            length = DoubleInputAutomation();
+            printf("Insert the width:\n");
+            width = DoubleInputAutomation();
+            double area = (length * width);
+            printf("The area of your rectangle is: %lf" , area);
+            break;
+        }
+    }
+
 }
