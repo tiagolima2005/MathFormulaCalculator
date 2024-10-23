@@ -5,6 +5,7 @@ void circleFormulas();
 void triangleFormulas();
 void squareFormulas();
 void rectangleFormulas();
+void sphereFormulas();
 int IntegerInputAutomation();
 double DoubleInputAutomation();
 int mainMenuRepeat();
@@ -96,7 +97,7 @@ int main()
         break;
 
     case 5:
-        /* code */
+        sphereFormulas();
         break;
 
     case 6:
@@ -292,7 +293,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double area = (length * width);
-            printf("The area of your rectangle is: %lf" , area);
+            printf("The area of your rectangle is: %lf\n" , area);
             break;
         }
         else if (rectangleAnswer == 2)
@@ -302,7 +303,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double perimeter = (2 * (length + width));
-            printf("The perimeter of your rectangle is: %lf" , perimeter);
+            printf("The perimeter of your rectangle is: %lf\n" , perimeter);
             break;
         }
         else if (rectangleAnswer == 3)
@@ -312,7 +313,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double diagonal = sqrt((length * length) + (width * width));
-            printf("The diagonal of your rectangle is: %lf" , diagonal);
+            printf("The diagonal of your rectangle is: %lf\n" , diagonal);
             break;
         }
         else if (rectangleAnswer == 4)
@@ -322,7 +323,57 @@ void rectangleFormulas()
         }
         else
         {
-            printf("Please insert a valid number\n");
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
         }
+    }
+}
+
+void sphereFormulas()
+{
+    int sphereAnswer;
+    double radius;
+    while (1)
+    {
+    printf("Choose one of the following sphere formulas:\n");
+    printf("1 - Surface Area of a sphere\n");
+    printf("2 - Volume of a sphere\n");
+    printf("3 - Circumference of a sphere\n");
+    printf("4 - Return to main menu\n");
+    
+    sphereAnswer = IntegerInputAutomation();
+
+    if (sphereAnswer == 1)
+    {
+        printf("Insert the radius:\n");
+        radius = DoubleInputAutomation();
+        double surface = (4 * M_PI * (radius * radius));
+        printf("The surface area of your sphere is: %lf\n" , surface);
+        break;
+    }
+    else if (sphereAnswer == 2)
+    {
+        printf("Insert the radius:\n");
+        radius = DoubleInputAutomation();
+        double volume = ((4/3) * M_PI * (radius * radius * radius));
+        printf("The volume of your sphere is: %lf\n" , volume);
+        break;
+    }
+    else if (sphereAnswer == 3)
+    {
+        printf("Insert the radius:\n");
+        radius = DoubleInputAutomation();
+        double circumference = (2 * M_PI * radius);
+        printf("The circumference of your sphere is: %lf\n" , circumference);
+        break;
+    }
+    else if (sphereAnswer == 4)
+    {
+        printf("Returning to main menu...\n");
+        break;
+    }
+    else
+    {
+        printf("Invalid number, please choose 1, 2, 3 or 4\n");
+    }
     }
 }
