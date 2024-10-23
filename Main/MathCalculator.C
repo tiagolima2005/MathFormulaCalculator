@@ -354,7 +354,7 @@ void sphereFormulas()
     {
         printf("Insert the radius:\n");
         radius = DoubleInputAutomation();
-        double volume = ((4/3) * M_PI * (radius * radius * radius));
+        double volume = ((4.0 / 3.0) * M_PI * (radius * radius * radius));
         printf("The volume of your sphere is: %lf\n" , volume);
         break;
     }
@@ -373,7 +373,7 @@ void sphereFormulas()
     }
     else
     {
-        printf("Invalid number, please choose 1, 2, 3 or 4\n");
+        printf("Invalid number, please choose 1, 2, 3 or 4...\n");
     }
     }
 }
