@@ -14,7 +14,8 @@ int mainMenuRepeat()
     int input;
     while (1)
     {
-        printf("\nEnter the number of the formula you want:\n");
+        printf("\nWelcome to the Math Formulas Calculator\n");
+        printf("Enter the number of the formula you want:\n");
         printf("1 - Circle Formulas\n");
         printf("2 - Triangle Formulas\n");
         printf("3 - Square Formulas\n");
