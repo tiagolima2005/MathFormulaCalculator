@@ -6,6 +6,7 @@ void triangleFormulas();
 void squareFormulas();
 void rectangleFormulas();
 void sphereFormulas();
+void cylinderFormulas();
 int IntegerInputAutomation();
 double DoubleInputAutomation();
 int mainMenuRepeat();
@@ -101,7 +102,7 @@ int main()
         break;
 
     case 6:
-        /* code */
+        cylinderFormulas();
         break;
     
     case 7:
@@ -376,5 +377,75 @@ void sphereFormulas()
     {
         printf("Invalid number, please choose 1, 2, 3 or 4...\n"); // prompt for valid input
     }
+    }
+}
+
+void cylinderFormulas()
+{
+    int cylinderAnswer;
+    double radius;
+    double height;
+    while (1)
+    {
+        printf("Choose one of the following cylinder formulas:\n");
+        printf("1 - Lateral Surface Area of a Cylinder\n");
+        printf("2 - Total Surface Area of a Cylinder\n");
+        printf("3 - Volume of a Cylinder\n");
+        printf("4 - Base Area of a Cylinder\n");
+        printf("5 - Return to main menu\n");
+        cylinderAnswer = IntegerInputAutomation();
+
+        if (cylinderAnswer == 1)
+        {
+            printf("Insert the radius:\n");
+            radius = DoubleInputAutomation();
+            printf("Insert the height:\n");
+            height = DoubleInputAutomation();
+            double LATsurfaceArea = (2 * M_PI * radius * height);
+            printf("The Lateral Surface Area of your cylinder is: %lf\n" , LATsurfaceArea);
+            break;
+        }
+
+        else if (cylinderAnswer == 2)
+        {
+            printf("Insert the radius:\n");
+            radius = DoubleInputAutomation();
+            printf("Insert the height:\n");
+            height = DoubleInputAutomation();
+            double TOTALsurfaceArea = (2 * M_PI * radius * (radius + height));
+            printf("The Total Surface Area of your cylinder is: %lf\n" , TOTALsurfaceArea);
+            break;
+        }
+
+        else if (cylinderAnswer == 3)
+        {
+            printf("Insert the radius:\n");
+            radius = DoubleInputAutomation();
+            printf("Insert the height:\n");
+            height = DoubleInputAutomation();
+            double volume = (M_PI * (radius * radius) * height);
+            printf("The Volume of your cylinder is: %lf\n" , volume);
+            break;
+        }
+
+        else if (cylinderAnswer == 4)
+        {
+            printf("Insert the radius:\n");
+            radius = DoubleInputAutomation();
+            double BaseArea = (M_PI * (radius * radius));
+            printf("The Base Area of your cylinder is: %lf\n" , BaseArea);
+            break;
+        }
+
+        else if (cylinderAnswer == 5)
+        {
+            printf("Returning to main menu...\n");
+            break;
+        }
+
+        else
+        {
+            printf("Invalid number, please choose 1, 2, 3, 4 or 5...\n");
+        }
     }
 }
