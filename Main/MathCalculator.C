@@ -382,10 +382,11 @@ void sphereFormulas()
 
 void cylinderFormulas()
 {
-    int cylinderAnswer;
-    double radius;
-    double height;
-    while (1)
+    int cylinderAnswer; // tore the user's choice
+    double radius; //  the radius value
+    double height; // the height value
+
+    while (1) // infinite loop until the user chooses to exit
     {
         printf("Choose one of the following cylinder formulas:\n");
         printf("1 - Lateral Surface Area of a Cylinder\n");
@@ -393,59 +394,60 @@ void cylinderFormulas()
         printf("3 - Volume of a Cylinder\n");
         printf("4 - Base Area of a Cylinder\n");
         printf("5 - Return to main menu\n");
-        cylinderAnswer = IntegerInputAutomation();
 
-        if (cylinderAnswer == 1)
+        cylinderAnswer = IntegerInputAutomation(); // get the user's input for their choice
+
+        if (cylinderAnswer == 1) // if the user chooses option 1
         {
             printf("Insert the radius:\n");
-            radius = DoubleInputAutomation();
+            radius = DoubleInputAutomation(); // get the radius of the cylinder
             printf("Insert the height:\n");
-            height = DoubleInputAutomation();
-            double LATsurfaceArea = (2 * M_PI * radius * height);
-            printf("The Lateral Surface Area of your cylinder is: %lf\n" , LATsurfaceArea);
-            break;
+            height = DoubleInputAutomation(); // get the height of the cylinder
+            double LATsurfaceArea = (2 * M_PI * radius * height); // calculate the Lateral Surface Area
+            printf("The Lateral Surface Area of your cylinder is: %lf\n" , LATsurfaceArea); // display the result
+            break; // exit loop
         }
 
-        else if (cylinderAnswer == 2)
+        else if (cylinderAnswer == 2) // if the user chooses option 2
         {
             printf("Insert the radius:\n");
-            radius = DoubleInputAutomation();
+            radius = DoubleInputAutomation(); // get the radius of the cylinder
             printf("Insert the height:\n");
-            height = DoubleInputAutomation();
-            double TOTALsurfaceArea = (2 * M_PI * radius * (radius + height));
-            printf("The Total Surface Area of your cylinder is: %lf\n" , TOTALsurfaceArea);
-            break;
+            height = DoubleInputAutomation(); // get the height of the cylinder
+            double TOTALsurfaceArea = (2 * M_PI * radius * (radius + height)); // calculate the Total Surface Area
+            printf("The Total Surface Area of your cylinder is: %lf\n" , TOTALsurfaceArea); // display the result
+            break; // exit loop
         }
 
-        else if (cylinderAnswer == 3)
+        else if (cylinderAnswer == 3) // if the user chooses option 3
         {
             printf("Insert the radius:\n");
-            radius = DoubleInputAutomation();
+            radius = DoubleInputAutomation(); // get the radius of the cylinder
             printf("Insert the height:\n");
-            height = DoubleInputAutomation();
-            double volume = (M_PI * (radius * radius) * height);
-            printf("The Volume of your cylinder is: %lf\n" , volume);
-            break;
+            height = DoubleInputAutomation(); // get the height of the cylinder
+            double volume = (M_PI * (radius * radius) * height); // calculate the volume
+            printf("The Volume of your cylinder is: %lf\n" , volume); // display the result
+            break; // exit loop
         }
 
-        else if (cylinderAnswer == 4)
+        else if (cylinderAnswer == 4) // if the user chooses option 4
         {
             printf("Insert the radius:\n");
-            radius = DoubleInputAutomation();
-            double BaseArea = (M_PI * (radius * radius));
-            printf("The Base Area of your cylinder is: %lf\n" , BaseArea);
-            break;
+            radius = DoubleInputAutomation(); // get the radius of the cylinder
+            double BaseArea = (M_PI * (radius * radius)); // calculate the Base Area
+            printf("The Base Area of your cylinder is: %lf\n" , BaseArea); // display the result
+            break; // exit loop
         }
 
-        else if (cylinderAnswer == 5)
+        else if (cylinderAnswer == 5) // if the user chooses option 5
         {
-            printf("Returning to main menu...\n");
-            break;
+            printf("Returning to main menu...\n"); // Inform the user
+            break; // exit loop
         }
 
-        else
+        else // if the user inserts an invalid option
         {
-            printf("Invalid number, please choose 1, 2, 3, 4 or 5...\n");
+            printf("Invalid number, please choose 1, 2, 3, 4 or 5...\n"); // prompt for valid input
         }
     }
 }
