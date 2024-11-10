@@ -242,7 +242,7 @@ void squareFormulas()
             printf("Insert the side length:\n");
             side_length = DoubleInputAutomation();
             double area = (side_length * side_length);
-            printf("The area of your square is: %lf\n" , area);
+            printf("The area of your square is: %.2lf\n" , area);
             break;
         }
         else if (squareAnswer == 2)
@@ -250,7 +250,7 @@ void squareFormulas()
             printf("Insert the side length:\n");
             side_length = DoubleInputAutomation();
             double perimeter = (4 * side_length);
-            printf("The perimeter of your square is: %lf\n" , perimeter);
+            printf("The perimeter of your square is: %.2lf\n" , perimeter);
             break;
         }
         else if (squareAnswer == 3)
@@ -258,7 +258,7 @@ void squareFormulas()
             printf("Insert the side length:\n");
             side_length = DoubleInputAutomation();
             double diagonal = (side_length * sqrt(2));
-            printf("The diagonal of your square is: %lf\n" , diagonal);
+            printf("The diagonal of your square is: %.2lf\n" , diagonal);
             break;
         }
         else if (squareAnswer == 4)
@@ -294,7 +294,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double area = (length * width);
-            printf("The area of your rectangle is: %lf\n" , area);
+            printf("The area of your rectangle is: %.2lf\n" , area);
             break;
         }
         else if (rectangleAnswer == 2)
@@ -304,7 +304,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double perimeter = (2 * (length + width));
-            printf("The perimeter of your rectangle is: %lf\n" , perimeter);
+            printf("The perimeter of your rectangle is: %.2lf\n" , perimeter);
             break;
         }
         else if (rectangleAnswer == 3)
@@ -314,7 +314,7 @@ void rectangleFormulas()
             printf("Insert the width:\n");
             width = DoubleInputAutomation();
             double diagonal = sqrt((length * length) + (width * width));
-            printf("The diagonal of your rectangle is: %lf\n" , diagonal);
+            printf("The diagonal of your rectangle is: %.2lf\n" , diagonal);
             break;
         }
         else if (rectangleAnswer == 4)
@@ -349,7 +349,7 @@ void sphereFormulas()
         printf("Insert the radius:\n");
         radius = DoubleInputAutomation(); // get the radius of the sphere
         double surface = (4 * M_PI * (radius * radius)); // calculate the surface area
-        printf("The surface area of your sphere is: %lf\n" , surface); // display the result
+        printf("The surface area of your sphere is: %.2lf\n" , surface); // display the result
         break; // exit loop
     }
     else if (sphereAnswer == 2) // if the user chooses option 2
@@ -357,7 +357,7 @@ void sphereFormulas()
         printf("Insert the radius:\n");
         radius = DoubleInputAutomation(); // get the radius of the sphere
         double volume = ((4.0 / 3.0) * M_PI * (radius * radius * radius)); // calculate the volume
-        printf("The volume of your sphere is: %lf\n" , volume); // display the result
+        printf("The volume of your sphere is: %.2lf\n" , volume); // display the result
         break; // exit loop
     }
     else if (sphereAnswer == 3) // if the user chooses option 3
@@ -365,7 +365,7 @@ void sphereFormulas()
         printf("Insert the radius:\n");
         radius = DoubleInputAutomation(); // get the radius of the sphere
         double circumference = (2 * M_PI * radius); // calculate the circumference
-        printf("The circumference of your sphere is: %lf\n" , circumference); // display the result
+        printf("The circumference of your sphere is: %.2lf\n" , circumference); // display the result
         break; // exit loop
     }
     else if (sphereAnswer == 4) // if the user chooses option 4
@@ -404,7 +404,7 @@ void cylinderFormulas()
             printf("Insert the height:\n");
             height = DoubleInputAutomation(); // get the height of the cylinder
             double LATsurfaceArea = (2 * M_PI * radius * height); // calculate the Lateral Surface Area
-            printf("The Lateral Surface Area of your cylinder is: %lf\n" , LATsurfaceArea); // display the result
+            printf("The Lateral Surface Area of your cylinder is: %.2lf\n" , LATsurfaceArea); // display the result
             break; // exit loop
         }
 
@@ -415,7 +415,7 @@ void cylinderFormulas()
             printf("Insert the height:\n");
             height = DoubleInputAutomation(); // get the height of the cylinder
             double TOTALsurfaceArea = (2 * M_PI * radius * (radius + height)); // calculate the Total Surface Area
-            printf("The Total Surface Area of your cylinder is: %lf\n" , TOTALsurfaceArea); // display the result
+            printf("The Total Surface Area of your cylinder is: %.2lf\n" , TOTALsurfaceArea); // display the result
             break; // exit loop
         }
 
@@ -426,7 +426,7 @@ void cylinderFormulas()
             printf("Insert the height:\n");
             height = DoubleInputAutomation(); // get the height of the cylinder
             double volume = (M_PI * (radius * radius) * height); // calculate the volume
-            printf("The Volume of your cylinder is: %lf\n" , volume); // display the result
+            printf("The Volume of your cylinder is: %.2lf\n" , volume); // display the result
             break; // exit loop
         }
 
@@ -435,7 +435,7 @@ void cylinderFormulas()
             printf("Insert the radius:\n");
             radius = DoubleInputAutomation(); // get the radius of the cylinder
             double BaseArea = (M_PI * (radius * radius)); // calculate the Base Area
-            printf("The Base Area of your cylinder is: %lf\n" , BaseArea); // display the result
+            printf("The Base Area of your cylinder is: %.2lf\n" , BaseArea); // display the result
             break; // exit loop
         }
 
