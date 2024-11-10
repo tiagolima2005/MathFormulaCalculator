@@ -161,64 +161,69 @@ void circleFormulas()
 
 void triangleFormulas()
 {
-    int triangleAnswer;
-    double side_a;
-    double side_b;
-    double side_c;
-    double height;
+    int triangleAnswer; // store the user's choice
+    double side_a; // store length of side a
+    double side_b; // tore length of side b
+    double side_c; // store length of side c
+    double height; // store the height of the triangle
 
-    while (1) 
+    while (1) // Loop continuously until the user chooses to return to the main menu
     {
-    printf("Choose one of the following triangle formulas:\n");
-    printf("1 - Hypotenuse (using the Pythagorean Theorem)\n");
-    printf("2 - Area of a Triangle\n");
-    printf("3 - Perimeter of a Triangle\n");
-    printf("4 - Return to main menu...\n");
+        // Prompt the user to select a triangle formula
+        printf("Choose one of the following triangle formulas:\n");
+        printf("1 - Hypotenuse (using the Pythagorean Theorem)\n");
+        printf("2 - Area of a Triangle\n");
+        printf("3 - Perimeter of a Triangle\n");
+        printf("4 - Return to main menu...\n");
 
-    triangleAnswer = IntegerInputAutomation();
+        triangleAnswer = IntegerInputAutomation(); // Get the user's choice
 
-        if (triangleAnswer == 1)
+        if (triangleAnswer == 1) // If the user chooses option 1 (Hypotenuse)
         {
             printf("Insert the length of side a\n");
-            side_a = DoubleInputAutomation();
+            side_a = DoubleInputAutomation(); // Get the length of side a
             printf("Insert the length of side b\n");
-            side_b = DoubleInputAutomation();
+            side_b = DoubleInputAutomation(); // Get the length of side b
+            
+            // Calculate the hypotenuse using the Pythagorean theorem
             double hypotenuse = sqrt((side_a * side_a) + (side_b * side_b));
-            printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse);
-            break;
+            printf("\nThe hypotenuse of your triangle is: %.2lf\n" , hypotenuse); // Display result
+            break; // Exit loop
         }
-
-        else if (triangleAnswer == 2)
+        else if (triangleAnswer == 2) // If the user chooses option 2 (Area)
         {
             printf("Insert the length of side b\n");
-            side_b = DoubleInputAutomation();
+            side_b = DoubleInputAutomation(); // Get the length of side b
             printf("Insert the height\n");
-            height = DoubleInputAutomation();
+            height = DoubleInputAutomation(); // Get the height of the triangle
+            
+            // Calculate the area of the triangle
             double area = (side_b * height) / 2;
-            printf("\nThe area of your triangle is: %.2lf\n" , area);
-            break;
+            printf("\nThe area of your triangle is: %.2lf\n" , area); // Display result
+            break; // Exit loop
         }
-
-        else if (triangleAnswer == 3)
+        else if (triangleAnswer == 3) // If the user chooses option 3 (Perimeter)
         {
             printf("Insert the length of side a\n");
-            side_a = DoubleInputAutomation();
+            side_a = DoubleInputAutomation(); // Get the length of side a
             printf("Insert the length of side b\n");
-            side_b = DoubleInputAutomation();
+            side_b = DoubleInputAutomation(); // Get the length of side b
             printf("Insert the length of side c\n");
-            side_c = DoubleInputAutomation();
+            side_c = DoubleInputAutomation(); // Get the length of side c
+            
+            // Calculate the perimeter of the triangle
             double perimeter = (side_a + side_b + side_c);
-            printf("\nThe perimeter of our triangle is: %.2lf\n" , perimeter);
-            break;
+            printf("\nThe perimeter of our triangle is: %.2lf\n" , perimeter); // Display result
+            break; // Exit loop
         }
-        else if (triangleAnswer == 4)
+        else if (triangleAnswer == 4) // If the user chooses option 4 (Return to main menu)
         {
-            printf("Returning to main menu\n");
-            break;
+            printf("Returning to main menu\n"); // Inform the user
+            break; // Exit loop
         }
-        else
+        else // If the user enters an invalid option
         {
-            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n"); // Prompt for a valid input
         }
     }
 }
