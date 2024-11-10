@@ -74,47 +74,49 @@ double DoubleInputAutomation()
 
 int main()
 {
-    int option;
-    do
+    int option; // Variable to store the user's menu choice
+
+    do // Loop until the user selects the option to close the program
     {
-    option = mainMenuRepeat();
+        option = mainMenuRepeat(); // Display the main menu and get the user's choice
 
-    switch (option)
-    {
-    case 1:
-        circleFormulas();
-        break;
+        // Execute the code block corresponding to the user's choice
+        switch (option)
+        {
+        case 1:
+            circleFormulas(); // Call the function to display circle formulas
+            break;
 
-    case 2:
-        triangleFormulas();
-        break;
+        case 2:
+            triangleFormulas(); // Call the function to display triangle formulas
+            break;
 
-    case 3:
-        squareFormulas();
-        break;
+        case 3:
+            squareFormulas(); // Call the function to display square formulas
+            break;
 
-    case 4:
-        rectangleFormulas();
-        break;
+        case 4:
+            rectangleFormulas(); // Call the function to display rectangle formulas
+            break;
 
-    case 5:
-        sphereFormulas();
-        break;
+        case 5:
+            sphereFormulas(); // Call the function to display sphere formulas
+            break;
 
-    case 6:
-        cylinderFormulas();
-        break;
+        case 6:
+            cylinderFormulas(); // Call the function to display cylinder formulas
+            break;
+        
+        case 7:
+            printf("Closing...\n"); // Notify the user that the program is closing
+            break;
+
+        default:
+            printf("Insert a valid number\n"); // Inform the user to select a valid option if an invalid input is provided
+        }
+    } while (option != 7); // Continue looping until the user selects option 7 to close
     
-    case 7:
-        printf("Closing...\n");
-        break;
-
-    default:
-        printf("Insert a valid number\n");
-    }
-    } while (option != 7);
-    
-    return 0;
+    return 0; // Return 0 to indicate successful completion
 }
 
 void circleFormulas()
