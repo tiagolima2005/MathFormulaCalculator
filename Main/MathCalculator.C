@@ -225,50 +225,52 @@ void triangleFormulas()
 
 void squareFormulas()
 {
-    while (1)
+    while (1) // Loop continuously until the user chooses to return to the main menu
     {
-        int squareAnswer;
-        double side_length;
+        int squareAnswer; // store the user's choice
+        double side_length; // store the length of a side of the square
+        
+        // Prompt the user to select a square formula
         printf("Choose one of the following square formulas:\n");
         printf("1 - Area of a square\n");
         printf("2 - Perimeter of a square\n");
         printf("3 - Diagonal of a square\n");
         printf("4 - Return to main menu\n");
 
-        squareAnswer = IntegerInputAutomation();
+        squareAnswer = IntegerInputAutomation(); // Get the user's input for their choice
 
-        if (squareAnswer == 1)
+        if (squareAnswer == 1) // If the user chooses option 1
         {
             printf("Insert the side length:\n");
-            side_length = DoubleInputAutomation();
-            double area = (side_length * side_length);
-            printf("The area of your square is: %.2lf\n" , area);
-            break;
+            side_length = DoubleInputAutomation(); // Get the side length of the square
+            double area = (side_length * side_length); // Calculate the area of the square
+            printf("The area of your square is: %.2lf\n" , area); // Display the result
+            break; // Exit loop
         }
-        else if (squareAnswer == 2)
+        else if (squareAnswer == 2) // If the user chooses option 2
         {
             printf("Insert the side length:\n");
-            side_length = DoubleInputAutomation();
-            double perimeter = (4 * side_length);
-            printf("The perimeter of your square is: %.2lf\n" , perimeter);
-            break;
+            side_length = DoubleInputAutomation(); // Get the side length of the square
+            double perimeter = (4 * side_length); // Calculate the perimeter of the square
+            printf("The perimeter of your square is: %.2lf\n" , perimeter); // Display the result
+            break; // Exit loop
         }
-        else if (squareAnswer == 3)
+        else if (squareAnswer == 3) // If the user chooses option 3
         {
             printf("Insert the side length:\n");
-            side_length = DoubleInputAutomation();
-            double diagonal = (side_length * sqrt(2));
-            printf("The diagonal of your square is: %.2lf\n" , diagonal);
-            break;
+            side_length = DoubleInputAutomation(); // Get the side length of the square
+            double diagonal = (side_length * sqrt(2)); // Calculate the diagonal of the square
+            printf("The diagonal of your square is: %.2lf\n" , diagonal); // Display the result
+            break; // Exit loop
         }
-        else if (squareAnswer == 4)
+        else if (squareAnswer == 4) // If the user chooses option 4
         {
-            printf("Returning to main menu...\n");
-            break;
+            printf("Returning to main menu...\n"); // Inform the user
+            break; // Exit loop
         }
-        else
+        else // If the user inserts an invalid option
         {
-            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n"); // Prompt for valid input
         }
     }
 }
