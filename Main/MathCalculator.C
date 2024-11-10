@@ -1,21 +1,24 @@
 #include <stdio.h>
 #include <math.h>
 
+// Function declarations for different formula categories
 void circleFormulas();
 void triangleFormulas();
 void squareFormulas();
 void rectangleFormulas();
 void sphereFormulas();
 void cylinderFormulas();
-int IntegerInputAutomation();
-double DoubleInputAutomation();
-int mainMenuRepeat();
+int IntegerInputAutomation(); // Function to automate integer input validation
+double DoubleInputAutomation(); // Function to automate double input validation
+int mainMenuRepeat(); // Function to display the main menu and get user choice
 
+// Function to display the main menu and get a valid input from the user
 int mainMenuRepeat()
 {
-    int input;
-    while (1)
+    int input; // Variable to store the user's menu choice
+    while (1) // Loop until a valid input is entered
     {
+        // Display the main menu options
         printf("\nWelcome to the Math Formulas Calculator\n");
         printf("Enter the number of the formula you want:\n");
         printf("1 - Circle Formulas\n");
@@ -25,51 +28,56 @@ int mainMenuRepeat()
         printf("5 - Sphere Formulas\n");
         printf("6 - Cylinder Formulas\n");
         printf("7 - Close the program\n");
-        if (scanf("%d" , &input) != 1)
+
+        // Attempt to read an integer from the user
+        if (scanf("%d" , &input) != 1) // Check if the input is a valid integer
         {
-            while (getchar() != '\n');
-            printf("\nInsert a valid number\n");
+            while (getchar() != '\n'); // Clear the input buffer if invalid
+            printf("\nInsert a valid number\n"); // Prompt the user to enter a valid number
         }
         else
         {
-            return input;
+            return input; // Return the valid menu option
         }
     }
 }
 
-
+// Function to automate integer input validation
 int IntegerInputAutomation()
 {
-    int input;
-    while (1)
+    int input; // Variable to store the user input
+    while (1) // Loop until a valid integer is entered
     {
-        if (scanf("%d" , &input) != 1)
+        // Attempt to read an integer from the user
+        if (scanf("%d" , &input) != 1) // Check if the input is a valid integer
         {
-            while (getchar() != '\n');
-            printf("\nInsert a valid number...\n");
+            while (getchar() != '\n'); // Clear the input buffer if invalid
+            printf("\nInsert a valid number...\n"); // Prompt the user to enter a valid number
         }
         else
         {
-            return input;
+            return input; // Return the valid integer
         }
     }
 }
 
+// Function to automate double input validation
 double DoubleInputAutomation()
 {
-    double input;
-    while (1)
+    double input; // Variable to store the user input
+    while (1) // Loop until a valid double is entered
+    {
+        // Attempt to read a double from the user
+        if (scanf("%lf" , &input) != 1) // Check if the input is a valid double
         {
-        if (scanf("%lf" , &input) != 1)
-        {
-            while (getchar() != '\n');
-            printf("\nInsert a valid number\n");
+            while (getchar() != '\n'); // Clear the input buffer if invalid
+            printf("\nInsert a valid number\n"); // Prompt the user to enter a valid number
         }
         else
         {
-            return input;
+            return input; // Return the valid double
         }
-        }
+    }
 }
 
 int main()
