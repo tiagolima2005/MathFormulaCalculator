@@ -119,43 +119,48 @@ int main()
 
 void circleFormulas()
 {
-    double Radius;
-    int circleAnswer;
+    double Radius; // store the radius of the circle
+    int circleAnswer; // store the user's choice
 
-    while (1)
+    while (1) // Loop continuously until the user chooses to return to the main menu
     {
-    printf("Choose one of the following circle formulas:\n");
-    printf("1 - Circumference (C)\n");
-    printf("2 - Area (A)\n");
-    printf("3 - Return to main menu\n");
+        // Prompt the user to select a circle formula
+        printf("Choose one of the following circle formulas:\n");
+        printf("1 - Circumference (C)\n");
+        printf("2 - Area (A)\n");
+        printf("3 - Return to main menu\n");
 
-    circleAnswer = IntegerInputAutomation();
+        circleAnswer = IntegerInputAutomation(); // Get the user's choice
 
-    if (circleAnswer == 1)
-    {
-        printf("Insert the Radius of the circle:\n");
-        Radius = DoubleInputAutomation();
-        double circumference = (2 * M_PI * Radius);
-        printf("\nThe Circumference of your circle is: %.2lf\n" , circumference);
-        break;
-    }
-    else if (circleAnswer == 2)
-    {
-        printf("Insert the Radius of the circle:\n");
-        Radius = DoubleInputAutomation();
-        double area = (M_PI * (Radius * Radius));
-        printf("\nThe Area of your circle is: %.2lf\n" , area);
-        break;
-    }
-    else if (circleAnswer == 3)
-    {
-        printf("Returning to main menu...\n");
-        break;
-    }
-    else 
-    {
-        printf("Invalid number, please choose 1, 2 or 3...\n");
-    }
+        if (circleAnswer == 1) // If the user chooses option 1 (Circumference)
+        {
+            printf("Insert the Radius of the circle:\n");
+            Radius = DoubleInputAutomation(); // Get the radius of the circle
+            
+            // Calculate the circumference using the formula C = 2 * π * Radius
+            double circumference = (2 * M_PI * Radius);
+            printf("\nThe Circumference of your circle is: %.2lf\n" , circumference); // Display result
+            break; // Exit loop
+        }
+        else if (circleAnswer == 2) // If the user chooses option 2 (Area)
+        {
+            printf("Insert the Radius of the circle:\n");
+            Radius = DoubleInputAutomation(); // Get the radius of the circle
+            
+            // Calculate the area using the formula A = π * Radius^2
+            double area = (M_PI * (Radius * Radius));
+            printf("\nThe Area of your circle is: %.2lf\n" , area); // Display result
+            break; // Exit loop
+        }
+        else if (circleAnswer == 3) // If the user chooses option 3 (Return to main menu)
+        {
+            printf("Returning to main menu...\n"); // Inform the user
+            break; // Exit loop
+        }
+        else // If the user enters an invalid option
+        {
+            printf("Invalid number, please choose 1, 2 or 3...\n"); // Prompt for a valid input
+        }
     }
 }
 
