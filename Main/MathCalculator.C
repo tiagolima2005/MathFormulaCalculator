@@ -275,56 +275,59 @@ void squareFormulas()
 
 void rectangleFormulas()
 {
-    while (1)
+    while (1) // Loop continuously until the user chooses to return to the main menu
     {
-        int rectangleAnswer;
-        double length;
-        double width;
+        int rectangleAnswer; // store the user's choice
+        double length; // store the length of the rectangle
+        double width; // store the width of the rectangle
+        
+        // Prompt the user to select a rectangle formula
         printf("Choose one of the following rectangle formulas:\n");
         printf("1 - Area of a rectangle\n");
         printf("2 - Perimeter of a rectangle\n");
         printf("3 - Diagonal of a rectangle\n");
         printf("4 - Return to main menu\n");
-        rectangleAnswer = IntegerInputAutomation();
+        
+        rectangleAnswer = IntegerInputAutomation(); // Get the user's input for their choice
 
-        if (rectangleAnswer == 1)
+        if (rectangleAnswer == 1) // If the user chooses option 1
         {
             printf("Insert the length:\n");
-            length = DoubleInputAutomation();
+            length = DoubleInputAutomation(); // Get the length of the rectangle
             printf("Insert the width:\n");
-            width = DoubleInputAutomation();
-            double area = (length * width);
-            printf("The area of your rectangle is: %.2lf\n" , area);
-            break;
+            width = DoubleInputAutomation(); // Get the width of the rectangle
+            double area = (length * width); // Calculate the area
+            printf("The area of your rectangle is: %.2lf\n" , area); // Display the result
+            break; // Exit loop
         }
-        else if (rectangleAnswer == 2)
+        else if (rectangleAnswer == 2) // If the user chooses option 2
         {
             printf("Insert the length:\n");
-            length = DoubleInputAutomation();
+            length = DoubleInputAutomation(); // Get the length of the rectangle
             printf("Insert the width:\n");
-            width = DoubleInputAutomation();
-            double perimeter = (2 * (length + width));
-            printf("The perimeter of your rectangle is: %.2lf\n" , perimeter);
-            break;
+            width = DoubleInputAutomation(); // Get the width of the rectangle
+            double perimeter = (2 * (length + width)); // Calculate the perimeter
+            printf("The perimeter of your rectangle is: %.2lf\n" , perimeter); // Display the result
+            break; // Exit loop
         }
-        else if (rectangleAnswer == 3)
+        else if (rectangleAnswer == 3) // If the user chooses option 3
         {
             printf("Insert the length:\n");
-            length = DoubleInputAutomation();
+            length = DoubleInputAutomation(); // Get the length of the rectangle
             printf("Insert the width:\n");
-            width = DoubleInputAutomation();
-            double diagonal = sqrt((length * length) + (width * width));
-            printf("The diagonal of your rectangle is: %.2lf\n" , diagonal);
-            break;
+            width = DoubleInputAutomation(); // Get the width of the rectangle
+            double diagonal = sqrt((length * length) + (width * width)); // Calculate the diagonal
+            printf("The diagonal of your rectangle is: %.2lf\n" , diagonal); // Display the result
+            break; // Exit loop
         }
-        else if (rectangleAnswer == 4)
+        else if (rectangleAnswer == 4) // If the user chooses option 4
         {
-            printf("Returning to main menu...\n");
-            break;
+            printf("Returning to main menu...\n"); // Inform the user
+            break; // Exit loop
         }
-        else
+        else // If the user inserts an invalid option
         {
-            printf("Invalid number, please choose 1, 2, 3 or 4...\n");
+            printf("Invalid number, please choose 1, 2, 3 or 4...\n"); // Prompt for valid input
         }
     }
 }
